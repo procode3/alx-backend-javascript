@@ -1,6 +1,6 @@
-export default function cleanSet(mySet, str) {
-  if (str.length === 0) {
+export default function cleanSet(set, startString) {
+  if (!startString || startString.length === 0) {
     return '';
   }
-  return Array.from(mySet).filter((item) => item.startsWith(str)).map((item) => item.slice(str.length)).join('-');
+  return Array.from(set).filter((item) => item.startsWith(startString)).map((item) => item.slice(startString.length)).join('-');
 }
