@@ -11,7 +11,7 @@ describe('Testing numbers', () => {
 
   it('1 is equal to 3', () => {
     expect(1 === 3).to.be.true;
-  });
+  }).isPending();
 
   it('3 is equal to 3', () => {
     expect(3 === 3).to.be.true;
@@ -31,5 +31,5 @@ describe('Testing numbers', () => {
 
   it('7 is equal to 7', () => {
     expect(7 === 7).to.be.true;
-  }).skip(); // Use .skip() to skip this test
+  }); 
 });
