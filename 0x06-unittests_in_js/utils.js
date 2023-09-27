@@ -1,8 +1,16 @@
 const Utils = {
     calculateNumber: (type, a, b) => {
-      // Your code for calculating the sum or other operations goes here
       if (type === 'SUM') {
-        return a + b;
+        return Math.round(a) + Math.round(b);
+      } else if (type === 'SUBTRACT') {
+        return Math.round(a) - Math.round(b);
+      } else if (type === 'DIVIDE') {
+        if (Math.round(b) === 0) {
+          return 'Error'; 
+        }
+        return Math.round(a) / Math.round(b);
+      } else {
+        throw new Error('Unsupported calculation type');
       }
     },
   };
